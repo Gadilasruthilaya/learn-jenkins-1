@@ -1,9 +1,18 @@
 pipeline {
     agent { node { label 'workstation' } }
 
+
+
     environment {
       SSH = credentials('SSH')
     }
+    options{
+        ansiColour('xterm')
+        }
+
+        parameters {
+                string(name: 'app_input', defaultValue: '', description: 'just input')
+         }
     stages {
         stage('Hello-1') {
             steps {
