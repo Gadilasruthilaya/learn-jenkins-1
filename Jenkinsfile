@@ -3,16 +3,18 @@ pipeline {
 
 
 
-    environment {
-      SSH = credentials('SSH')
-    }
-    options {
-            ansiColor('xterm')
-        }
+  environment {
+    SSH = credentials('SSH')
+  }
+ options {
+  ansiColor('xterm')
+  }
 
-        parameters {
-                string(name: 'app_input', defaultValue: '', description: 'just input')
-         }
+ triggers { pollSCM('h/2 * * * *') }
+
+ parameters {
+ string(name: 'app_input', defaultValue: '', description: 'just input')
+}
     stages {
         stage('Hello-1') {
             steps {
