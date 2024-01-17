@@ -6,8 +6,8 @@ pipeline {
     environment {
       SSH = credentials('SSH')
     }
-    options{
-        ansiColor('xterm')
+    options {
+            ansiColor('xterm')
         }
 
         parameters {
