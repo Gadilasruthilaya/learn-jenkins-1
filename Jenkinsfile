@@ -10,7 +10,7 @@ pipeline {
 //   ansiColor('xterm')
 //   }
 
- triggers { pollSCM('h/2 * * * *') }
+ triggers { pollSCM('H/2 * * * *') }
 
  parameters {
  string(name: 'app_input', defaultValue: '', description: 'just input')
