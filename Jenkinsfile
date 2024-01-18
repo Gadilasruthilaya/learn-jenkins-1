@@ -6,9 +6,9 @@ pipeline {
   environment {
     SSH = credentials('SSH')
   }
-//  options {
-//   ansiColor('xterm')
-//   }
+ options {
+  ansiColor('xterm')
+  }
 
  triggers { pollSCM('H/2 * * * *') }
 
